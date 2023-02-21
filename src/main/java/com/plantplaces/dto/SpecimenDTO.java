@@ -3,8 +3,9 @@ package com.plantplaces.dto;
 public class SpecimenDTO {
 private int specimenID;
 private String latitude;
-private String langitude;
+private String longitude;
 private String description;
+private int plantId;
 
 public int getSpecimenID() {
 	return specimenID;
@@ -18,21 +19,32 @@ public String getLatitude() {
 public void setLatitude(String latitude) {
 	this.latitude = latitude;
 }
-public String getLangitude() {
-	return langitude;
+
+public String getLongitude() {
+	return longitude;
 }
-public void setLangitude(String langitude) {
-	this.langitude = langitude;
+public void setLongitude(String longitude) {
+	this.longitude = longitude;
 }
+
 public String getDescription() {
 	return description;
 }
 public void setDescription(String description) {
 	this.description = description;
 }
+
+public int getPlantId() {
+	return plantId;
+}
+public void setPlantId(int plantId) {
+	this.plantId = plantId;
+}
 @Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return specimenID + " " + latitude + " " + langitude + " " + description;
+		return specimenID + " " + latitude + " " + longitude + " " + description;
 	}
+
+
 }

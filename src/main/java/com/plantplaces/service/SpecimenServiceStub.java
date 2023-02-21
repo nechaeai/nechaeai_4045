@@ -11,7 +11,7 @@ public SpecimenDTO fetchById(int id) {
 	SpecimenDTO specimenDTO = new SpecimenDTO();
 	specimenDTO.setSpecimenID(43);
 	specimenDTO.setLatitude("39.74");
-	specimenDTO.setLangitude("-84.51");
+	specimenDTO.setLongitude("-84.51");
 	specimenDTO.setDescription("A beautiful Eastern Redbud");
 
 	return specimenDTO;
