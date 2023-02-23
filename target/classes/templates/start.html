@@ -7,24 +7,62 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
 </head>
 <body>
-<form action="#" th:action="@{/searchPlants}" method="GET">
-Welcome to PlantPlaces!
-	<input type="text" name="searchTerm"/>
-	<button name="submit" type="submit" value="0">Search</button>
-</form>
+
+<nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand">Welcome to PlantPlaces!</a>
+    <form class="form-inline" action="#" th:action="@{/searchPlants}" method="GET">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="searchTerm">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
 <br/>
 Your Specimen is:
 <p th:text="${specimenDTO}"/>
 
 <form action="#" th:action="@{/savespecimen}" th:object="${specimenDTO}" method="GET">
-<div class="input-group input-group-sm mb-3">
-  <span class="input-group-text" id="inputGroup-sizing-sm">Latitude</span>
-  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name="Latitude" th:field="*{latitude}">
-</div>
 
-Longitude: <input type="text" name="Longitude" th:field="*{longitude}"/><br/>
-Description: <input type="text" name="description" th:field="*{description}"/><br/>
-Plant: <input type="text" name="plantId" th:field="*{plantId}"/><br/>
+<div class="input-group input-group-sm mb-3">
+ <div class="input-group-prepend">
+   <span class="input-group-text" id="inputGroup-sizing-sm">Latitude</span>
+ 
+ </div>
+   <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name="Latitude" th:field="*{latitude}">
+ </div>
+ 
+
+ 
+ <div class="input-group input-group-sm mb-3">
+ <div class="input-group-prepend">
+   <span class="input-group-text" id="inputGroup-sizing-sm">Longitude</span>
+ 
+ </div>
+   <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name="Longitude" th:field="*{longitude}">
+ </div>
+ 
+ 
+ 
+ 
+  <div class="input-group input-group-sm mb-3">
+ <div class="input-group-prepend">
+   <span class="input-group-text" id="inputGroup-sizing-sm">Description</span>
+ 
+ </div>
+   <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"  name="description" th:field="*{description}">
+ </div>
+ 
+ 
+ 
+   <div class="input-group input-group-sm mb-3">
+ <div class="input-group-prepend">
+   <span class="input-group-text" id="inputGroup-sizing-sm">Plant</span>
+ 
+ </div>
+   <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"  name="plantId" th:field="*{plantId}">
+ </div>
+  
+
 <button name="submit" type="submit" value="0">Submit</button>
 
 </form>

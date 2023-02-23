@@ -40,11 +40,11 @@ public int getPlantId() {
 public void setPlantId(int plantId) {
 	this.plantId = plantId;
 }
-@Override
-	public String toString() {
-		// TODO Auto-generated method stub
-		return specimenID + " " + latitude + " " + longitude + " " + description;
-	}
 
+@Override
+public String toString() {
+	// TODO Auto-generated method stub
+	return specimenID + " " + latitude + " " + longitude + " " + description;
+}
 
 }
