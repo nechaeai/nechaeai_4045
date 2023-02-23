@@ -103,13 +103,13 @@ public class HomeController {
 	public String index() {
 		return "start";
 	}
-	@RequestMapping("/searchPlants1")
+	@RequestMapping("/searchPlants")
 public String searchPlants(@RequestParam(value="searchTerm", required=false, defaultValue="0.0")String searchTerm ){
 	String enhancedTerm = searchTerm + "";
 	return "start";
 }
 	
-	@RequestMapping("/searchPlants")
+	@RequestMapping("/searchPlantsAll")
 public String searchPlantsAll(@RequestParam Map<String,String> requestParams){
 int params = requestParams.size();
 requestParams.get("searchTerm");
